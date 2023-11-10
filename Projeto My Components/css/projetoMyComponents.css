@@ -1,0 +1,326 @@
+:root {
+    --primary-color: #ff7833;
+    --secondary-color: #31333b;
+    --secondary-color-light: #444856;
+    --secondary-color-dark: #23252d;
+    --defaul-gap: 3rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    color: #e7e7e7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    background-image: url(../imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #9e9e9e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+.hightlight {
+    border-left: 1px solid var(--primary-color);
+    font-size: 1.1em;
+    padding: 0 0 0 2em;
+    margin-bottom: 2.2em;
+}
+
+article {
+    padding: 1em 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.underline {
+    text-decoration: red wavy underline;
+}
+
+.main_header {
+    flex: 0 0 26rem;
+    background-color: rgba(49, 51, 59, .8);
+}
+
+.main {
+    background-color: var(--secondary-color-light);
+    background-color: rgba(68, 72, 86, .6);
+    padding: 6.5rem 6rem 100vh;
+    flex: 1 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+    }
+    a:hover{
+        color: var(--primary-color);
+    }
+    .icom svg{
+        fill: currentColor;
+        width: 4rem;
+        height: 4rem;
+        vertical-align: middle;
+        padding: 1rem;
+        
+    }
+    .icom svg:hover{
+        fill: var(--primary-color);
+    }
+
+.main,
+.main_header {
+    font-size: 1.6rem;
+}
+
+.perfil-img {
+    max-width: 10rem;
+    margin-top: 1rem;
+}
+
+.main-nave {
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.main-nave ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nave ul a {
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: padding-right .2s, background-color .4s;
+    background-color: transparent;
+}
+
+.main-nave ul a:hover,
+.main-nave ul a:focus {
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+.main-nave li {
+    border-bottom: 1px solid #7b7b7b;
+    padding: .4rem 0;
+}
+
+.card {
+    max-width: 740px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+.card_content {
+    padding: .5em 1em 1em;
+}
+
+.card_content p,
+.card_title {
+    margin: 0;
+}
+
+.card_title {
+    font-size: 1.75em;
+    margin-bottom: .25em;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: var(--defaul-gap);
+    padding-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.row .row {
+    padding-top: 0;
+}
+
+/* esse codigo para deixar as listas alinhadas */
+.row>* {
+    /* flex-grow: 1;
+    flex-shrink: o;
+    flex-basis: 0%; */
+    flex: 1 0 0%;
+}
+
+.alternate {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.alternate li:not(:last-child) {
+    border-bottom: 2px solid;
+
+}
+
+.teste {
+    list-style-type: square;
+}
+
+.teste ul {
+    list-style-type: circle;
+}
+
+.emoji {
+    list-style-type: "\1f60e";
+}
+
+input,
+label,
+textarea,
+select {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: auto;
+    width: auto;
+}
+
+input,
+textarea,
+select {
+    background-color: #ccc;
+    padding: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 1.6rem;
+    border: 0;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color-dark);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* padding: 1.2rem; */
+    padding: .8em 1.2em;
+    border-radius: 5px;
+}
+
+.btn+.btn {
+    margin-left: 2rem;
+}
+
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--secondary-color-dark);
+}
+
+.form_quiz {
+    /* width: calc(50% - 1.5rem); */
+    width: calc(50% - (var(--defaul-gap) / 2));
+}
+
+.btn-stroke {
+    background-color: transparent;
+}
+
+.btn-big {
+    font-size: 1.6rem;
+}
+
+.btn-full {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-full+.btn-full {
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.tabela-1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-1 tr {
+    text-align: left;
+}
+
+.tabela-1 td:last-child,
+.tabela-1 th:last-child {
+    text-align: right;
+}
+
+.tabela-1 td,
+.tabela-1 th {
+    padding: 1.6rem;
+}
+
+.tabela-1:not(.tabela-2) td,
+.tabela-1:not(.tabela-2) th {
+    border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+.tabela-1 th {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.tabela-2 tbody tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
+
+.tabela-3 td:not(:last-child),
+.tabela-3 th:not(:last-child) {
+    border-right: 2px solid var(--secondary-color-dark);
+}
+
+/* persoanlizando 0 CRTL e C */
+kbd {
+    background-color: #cecbcb;
+    border-radius: 3px;
+    border: 1px solid #000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px;
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
